@@ -1,0 +1,212 @@
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f4f7f9;
+}
+
+/* ========== NAVBAR ========== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #007bff;
+}
+
+/* ========== MAIN CONTAINER ========== */
+main {
+  padding-top: 100px; /* espace pour la navbar */
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* ========== HOME PAGE ========== */
+.home-container {
+  display: flex;
+  gap: 2rem;
+  min-height: calc(90vh - 100px);
+  transition: background 0.4s ease-in-out;
+}
+
+.home-container.clear {
+  background: url("/assets/clear.jpg") center/cover no-repeat;
+  background-attachment: fixed;
+}
+
+/* ========== SECTIONS ========== */
+.weather-section,
+.city-info-section {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 2rem;
+  border-radius: 1.2rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== SEARCH BAR ========== */
+.search-bar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-bar input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.search-bar button {
+  padding: 0.8rem 1.2rem;
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #0056b3;
+}
+
+/* ========== WEATHER DISPLAY ========== */
+.weather-display h2 {
+  margin-bottom: 1rem;
+}
+
+.weather-display p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ========== CITY INFO ========== */
+.city-info h2 {
+  margin-bottom: 1rem;
+}
+
+.city-info p {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ========== HISTORY PAGE ========== */
+.history-page {
+  padding: 2rem;
+}
+
+.history-page h2 {
+  margin-bottom: 1rem;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+}
+
+.history-list li {
+  background-color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .home-container {
+    flex-direction: column;
+  }
+
+  .search-bar {
+    flex-direction: column;
+  }
+
+  .search-bar button {
+    width: 100%;
+  }
+}
+
+.history-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #ffffffcc;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(6px);
+}
+
+.history-container ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.history-container li {
+  padding: 0.5rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.clear-btn {
+  margin-top: 1rem;
+  background-color: crimson;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.weather-section,
+.city-info-section {
+  background-color: rgba(0, 0, 0, 0.5); /* couche sombre */
+  padding: 1.5rem;
+  border-radius: 16px;
+  width: 48%;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 0 10px #00000055;
+}
