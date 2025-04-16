@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import useWeather from "../../hooks/useWeather";
-import WeatherDisplay from "../WeatherDisplay/WeatherDisplay";
+import WeatherDisplay from "../../";
 import getWeatherBackground from "../../utils/getWeatherBackground";
 import CityInfo from "../CityInfo/CityInfo";
 
