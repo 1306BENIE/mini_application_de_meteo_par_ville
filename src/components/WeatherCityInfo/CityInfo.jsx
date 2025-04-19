@@ -1,6 +1,6 @@
 import React from "react";
 const CityInfo = ({ weather }) => {
-  if (!weather) return <p>Aucune information disponible.</p>;
+  if (!weather) return <p>Aucune information disponible</p>;
 
   const { name, sys } = weather;
 
