@@ -1,4 +1,4 @@
-// Retourne le nom de l’image selon le type de météo
+// Retourne le nom de l image selon le type de météo
 const getWeatherBackground = (main) => {
   switch (main?.toLowerCase()) {
     case "clear":
